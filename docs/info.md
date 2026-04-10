@@ -9,12 +9,12 @@ You can also include images in this folder and reference them in the markdown. E
 
 ## How it works
 
-Explain how your project works
+This project generates a VGA signal (640x480 @ 60Hz) using an `hvsync_generator` module for sync timing. The design produces moving color bar patterns by combining pixel coordinates with a frame counter that increments each vertical sync period. The R, G, and B channels are driven by different bit slices of the offset pixel position, creating a scrolling stripe effect.
 
 ## How to test
 
-Explain how to use your project
+Connect the VGA outputs to a TinyVGA PMOD and plug into a VGA monitor. Apply a 25.175 MHz clock and release reset (rst_n high). You should see animated color bars scrolling across the display.
 
 ## External hardware
 
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+TinyVGA PMOD connected to the dedicated output pins (uo_out).
